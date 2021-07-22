@@ -2,7 +2,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
 
-const VENDOR_LIBS = Object.keys(require('./package.json').dependencies);
+const VENDOR_LIBS = Object.keys(require('./package.json').dependencies).filter((val,index,arr)=> {return val!=='express'});
  
 
 module.exports = {
