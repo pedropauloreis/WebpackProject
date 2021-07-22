@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 
 app.get('/hello', (req,res) => res.send({hi:'there'}));
+app.get('/bye', (req,res) => res.send({hi:'you'}));
 
 console.log(`Running in ${process.env.NODE_ENV} environment`);
 
