@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "cross-env NODE_ENV=production npm run clean && webpack -p",
-    "runprod": "cross-env NODE_ENV=production npm run build && node server.js",
+    "buildWindows": "cross-env NODE_ENV=production npm run clean && webpack -p",
+    "runprodWindows": "cross-env NODE_ENV=production npm run build && node server.js",
+    "build": "NODE_ENV=production npm run clean && webpack -p",
     
-    "rundev": "cross-env NODE_ENV=development node server.js",
+    "rundevWindows": "cross-env NODE_ENV=development node server.js",
+    "rundev": "NODE_ENV=development node server.js",
 
     "serve": "webpack-dev-server",
     "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
